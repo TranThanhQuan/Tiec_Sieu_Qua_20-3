@@ -37,10 +37,10 @@ function getDataClient (){
             var dadoi;
             if (value.sent < value.max) {
                 
-                dadoi = `<img src="style/img/nhanqua-btn.png" class="bottom__card-btn" alt="">`;
+                dadoi = `<img src="assets/img/nhanqua-btn.png" class="bottom__card-btn" alt="">`;
             }
             else{
-                dadoi = `<img src="style/img/danhan-btn.png" class="bottom__card-btn" alt="">`;
+                dadoi = `<img src="assets/img/danhan-btn.png" class="bottom__card-btn" alt="">`;
             }
             $("#doiqua-btn"+id_addr).html(dadoi);
 
@@ -69,7 +69,7 @@ function getDataClient (){
             $("#diemthanmat-top").html(diemthanmat);
             $("#diemthanmat-bottom").html(diemthanmat);
 
-            console.log("1");
+            // console.log("1");
         }
 
         else{
@@ -89,7 +89,7 @@ function getDataClient (){
             $("#diemthanmat-bottom").html(diemthanmat);
 
 
-            console.log("2");
+            // console.log("2");
         }
     });
 };
