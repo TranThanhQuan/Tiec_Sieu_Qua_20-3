@@ -171,7 +171,7 @@ html{
     height: 420px;
     position: absolute;
     top: 0px;
-    left: 100px;
+    left: 0px;
 }
 
 .right__menu {
@@ -210,11 +210,11 @@ html{
 
 .menu_item {
     text-align: center;
-    font-size: 15px;
+    font-size: 12px;
     color: #fff;
 }
 .menu_item:first-child{
-    margin-bottom: 27px;
+    margin-bottom: 32px;
 }
 
 .menu_item img{
