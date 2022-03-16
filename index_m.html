@@ -7,11 +7,15 @@
     <title>Tiệc Siêu Quà 20/3</title>
     <!-- link bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script type="text/javascript" src="assets/jquery/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <!--  -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script> -->
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+    
+
     <script type="text/javascript">
         var jsVer = 15;
         var phoneWidth = parseInt(window.screen.width);
@@ -41,9 +45,14 @@
     </script>
 
     <!-- link sweet alert -->
-    <link rel="stylesheet" href="assets/css/style.css">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+
+
+
+
+
+    <!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
 
 </head>
@@ -71,7 +80,7 @@
         </ul>
 
         <div class="dangxuat" id="dangxuat">
-            <div class="dangxuat-list" id="dangxuat-mob">
+            <div class="dangxuat-list show-navbar" id="dangxuat-mob">
                 <a href="" class="home-icon"><img src="assets/img/icon-dn.png" alt=""></a>
                 <div class="text">
                     <p class="hi">Hi</p>
@@ -426,6 +435,147 @@
             </div>
         </div>
 </div>
+
+<!-- modal user info -->
+<div class="modal modal-wide fade in" id="user_info" aria-hidden="true" style="display: none; padding-right: 16px;">
+    <div class="modal-dialog">
+    <div class="modal-content" style="background:none;border:none;box-shadow:none;">
+        <div class="modal-body block" style="max-height:inherit;">
+            <a href="javascript:;" class="btn_close" onclick="$('#user_info').modal('toggle');"></a>
+
+            <div class="userinfo_wrapper">
+                <link rel="stylesheet" type="text/css" href="assets/css/userinfo.css">
+                <div class="popbox_userinfo" id="popbox">
+                    <div class="popcon">
+                        <h2 class="title_thele">Cập nhật thông tin</h2>
+                        <div class="poptxt">
+                            <div class="popmain">
+                                <form method="POST" id="promise_frm" onsubmit="return;">
+                                    <input type="hidden" id="frm_phe" name="phe">
+                                    <div class="form-group" style="margin-bottom:10px;">
+                                        <div class="row">
+                                            <div class="col-md-3"><label>Họ và tên:</label></div>
+                                            <div class="col-md-9"><input class="form-control" type="text" id="fullname" name="fullname"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom:10px;">
+                                        <div class="row">
+                                            <div class="col-md-3"><label>Số điện thoại:</label></div>
+                                            <div class="col-md-9"><input class="form-control" type="number" id="phone" name="phone"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group" style="margin-bottom:10px;">
+                                        <div class="row">
+                                            <div class="col-md-3"><label>Địa chỉ:</label></div>
+                                            <div class="col-md-9"><input class="form-control" type="text" id="address" name="address"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom:10px;">
+                                        <div class="row">
+                                            <div class="col-md-3"><label>Server:</label></div>
+                                            <div class="col-md-9">
+                                                <select class="form-control" id="server" name="server_id">
+                                                    <option value="">--Chọn máy chủ--</option>
+                                                        <option value="30001">S1 - Bảo Quân</option>
+                                                        <option value="30002">S2 - Hoa Liên</option>
+                                                        <option value="30003">S3 - Kiếm Vương</option>
+                                                        <option value="30004">S4 - Bá Vương</option>
+                                                        <option value="30005">S5 - Huyền Vũ</option>
+                                                        <option value="30006">S6 - Thiên Trì</option>
+                                                        <option value="30007">S7 - Đông Nhạc</option>
+                                                        <option value="30008">S8 - Nam Lâm</option>
+                                                        <option value="30009">S9 - Huyền Hồ</option>
+                                                        <option value="30010">S10 - Thần Địa</option>
+                                                        <option value="30011">S11 - Kiếm Khách</option>
+                                                        <option value="30012">S12 - Đao Khách</option>
+                                                        <option value="30013">S13 - Bắc Hải</option>
+                                                        <option value="30014">S14 - Băng Cung</option>
+                                                        <option value="30015">S15 - Đông Lãnh</option>
+                                                        <option value="30016">S16 - Diệu Yến</option>
+                                                        <option value="30017">S17 - Minh Hồ</option>
+                                                        <option value="30018">S18 - Trường Bạch</option>
+                                                        <option value="30019">S19 - Liễu Chính</option>
+                                                        <option value="30020">S20 - Đế Vương</option>
+                                                        <option value="30021">S21 - Lãnh Huyệt</option>
+                                                        <option value="30022">S22 - Thượng Tinh</option>
+                                                        <option value="30023">S23 - Cước Thương</option>
+                                                        <option value="30024">S24 - Thiên Ma</option>
+                                                        <option value="30025">S25 - Hoa Khuyết</option>
+                                                        <option value="30026">S26 - Thượng Tất</option>
+                                                        <option value="30027">S27 - Thần Võ</option>
+                                                        <option value="30028">S28 - Tây Tà</option>
+                                                        <option value="30029">S29 - Huyệt Viện</option>
+                                                        <option value="30030">S30 - Ảnh Kiếm</option>
+                                                        <option value="30031">S31 - Huyết Luân</option>
+                                                        <option value="30032">S32 - Hổ Huyệt</option>
+                                                        <option value="30033">S33 - Thế Hoa</option>
+                                                        <option value="30034">S34 - Thiên Vi</option>
+                                                        <option value="30035">S35 - Thần Nữ</option>
+                                                        <option value="30036">S36 - Bách Lý</option>
+                                                        <option value="30037">S37 - Thần Phong</option>
+                                                        <option value="30038">S38 - Cuồng Long</option>
+                                                        <option value="30039">S39 - Vô Ảnh</option>
+                                                        <option value="30040">S40 - Lang Vương</option>
+                                                        <option value="30041">S41 - Tuyết Vương</option>
+                                                        <option value="30042">S42 - Tam Tà</option>
+                                                        <option value="30043">S43 - Thiên Nguyên</option>
+                                                        <option value="30044">S44 - Phi Thiên</option>
+                                                        <option value="30045">S45 - Xà Vương</option>
+                                                        <option value="30046">S46 - Dược Tiên</option>
+                                                        <option value="30047">S47 - Lang Vương</option>
+                                                        <option value="30048">S48 - Cổ Tự</option>
+                                                        <option value="30049">S49 - Chu Công</option>
+                                                        <option value="30050">S50 - Âu Dương</option>
+                                                        <option value="30051">S51 - Thích Khách</option>
+                                                        <option value="30052">S52 - Lam Long</option>
+                                                        <option value="30053">S53 - Hỏa Nham</option>
+                                                        <option value="30054">S54 - Long Thiên</option>
+                                                        <option value="30055">S55 - Hổ Vương</option>
+                                                        <option value="30056">S56 - Ma Trư</option>
+                                                        <option value="30057">S57 - Đồ Long</option>
+                                                        <option value="30058">S58 - Cảnh Lang</option>
+                                                        <option value="30059">S59 - Nham Quy</option>
+                                                        <option value="30060">S60 - Địa Hổ</option>
+                                                        <option value="30061">S61 - Hỗn Nguyên</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group" style="margin-bottom:10px;">
+                                        <div class="row">
+                                            <div class="col-md-3"><label>Nhân Vật:</label></div>
+                                            <div class="col-md-9">
+                                                <select class="form-control" name="role_id" id="choose_role">
+                                                    <option value="0"> -- Vui lòng chọn server --</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div _class="form-group" style=" margin-bottom: 10px !important;">
+                                        <div class="row">
+                                            <div class="col-md-3"></div>
+                                            <div class="col-md-9"><button id="submit-promise" class="btn btn-primary">Cập nhật thông tin</button></div>
+                                        </div>
+                                    </div>
+                                    <normal>Lưu ý: Bạn cần nhập chính xác thông tin của bạn để chúng tôi có căn cứ trao quà cho bạn. Mọi sai sót chúng tôi không chịu trách nhiệm. Xin cảm ơn.</normal>
+                                </form>
+                            </div>  
+                        </div>
+                    </div>  
+                </div>
+                <div class="masklayer"></div>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+
+
 
 
 
