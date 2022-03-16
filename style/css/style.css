@@ -1,0 +1,1113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+html{
+    scroll-behavior: smooth;
+}
+#diemthanmat{
+    color: #007cb8;
+    margin-bottom: 20px;
+}
+
+#diemthanmat-mob{
+    display: none;
+    
+}
+
+
+/* #luottanghoa {
+    font-size: 20px;
+} */
+
+.wrapper {
+    background-image: url("./../img/bg_pc.jpg");
+    height: auto;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color:#c6f5fd;
+    width: 100%;
+    float: left;
+}
+
+.navbar {
+    display: none;
+}
+
+.container {
+    margin: 0 auto;
+    width: 100%;    
+}
+
+
+.container__top{
+    position: relative;
+    width: 100%;
+    height: 800px;
+    float: left;
+
+}
+
+.dangxuat{
+    display: none;
+}
+
+.dangxuat-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: -10px;
+    background-color: #7cb7b9;
+    border-radius: 20px;
+    padding: 0px 10px;
+    /* display: none; */
+}
+
+
+.dangnhap {
+    display: none;
+}
+
+.dangnhap-list {
+    position: absolute;
+    right: -20px;
+    top: 20px;
+    margin: 0px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7cb7b9;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+.dangnhap-item:first-child {
+  margin-right: 15px;
+
+}
+
+.dangnhap-item span {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.dangnhap-item a:hover {
+    text-decoration: none;
+}
+
+.dangnhap-item a img {
+    width: 20px;
+}
+
+
+.show {
+    display: block;
+}
+
+.show-navbar{
+    display: flex;
+    list-style: none;
+    float: right;
+    margin: 0px;
+    padding-top: 10px;
+}
+
+.home-icon img{
+    width: 30px;
+}
+
+.text {
+    display: flex;
+    line-height: 20px;
+    font-size: 18px;
+    margin-top: 15px;
+    color: #fff;
+}
+
+
+
+.hi {
+    color: #fff;
+    margin: 0px 4px 4px 4px;
+}
+
+.name-acount {
+    color: yellow;
+    margin-right: 4px;
+}
+
+.dangxuat-btn {
+    color: #fff;
+    margin-left: 4px;
+    font-weight: 500;
+    font-size: 18px;
+}
+.dangxuat-btn:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+
+
+.menu {
+    background-image: url("./../img/Background-container.png");
+    height: 565px;
+    background-repeat: no-repeat;
+    transform: translateY(55px);
+}
+
+.left__menu {
+    background-image: url("./../img/bg-menu.png");
+    background-repeat: no-repeat;
+    width: 220px;
+    height: 420px;
+    position: absolute;
+    top: 0px;
+    left: 100px;
+}
+
+.right__menu {
+    z-index: 10;
+    position: fixed;
+    top: 460px;
+    right: 0px;
+}
+
+
+.right__menu button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+}
+
+
+.menu_list {
+    list-style: none;
+    padding: 109px 20px 0 10px;
+}
+
+
+
+.right__menu button img{
+    transition: 0.3s;
+
+}
+
+.right__menu button img:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+
+
+.menu_item {
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+}
+.menu_item:first-child{
+    margin-bottom: 27px;
+}
+
+.menu_item img{
+    margin-bottom: 13px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.menu_item img:hover {
+    opacity: 1;
+    transform: translateX(2px);
+
+}
+
+.luottang-mobile{
+    /* display: none; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center; */
+    margin-top: 480px;
+    
+}
+
+.luottang{
+    text-align: center;
+    margin-top: 456px;
+}
+
+
+
+.luottang__item img{
+    transition: 0.3s;
+}
+
+.luottang__item img:hover {
+     opacity: 0.8;
+    transform: scale(1.05); 
+}
+
+
+.container__bottom-mobile {
+    display: none;
+}
+
+
+
+.container__bottom {
+    margin-bottom: 100px;
+    margin-top: 390px;
+    width: 100%;
+    text-align: center;
+    float: left;
+}
+
+
+.bottom__card {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.bottom__card .diem-than-mat {
+    display: none;
+}
+
+.card{
+    position: relative;
+    margin-bottom: 10px;
+    background-color: transparent;
+    border: none;
+}
+
+
+.card-doiqua {
+    position: absolute;
+    color: #007ab1;
+    top: 95px;
+    font-size: 20px;
+    left: 87px;
+}
+
+
+.diemdoi {
+    position: absolute;
+    top: 70px;
+    left: 60px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #007ab1;
+}
+
+
+
+.card a{
+    display: inline-block;
+    position: absolute;
+    bottom: 50px;
+    left: 70px;
+}
+.card a:hover {
+    transform: translateX(3px);
+    
+}
+
+
+.menu-mobile{
+    display: none;
+}
+
+
+
+/* modal BXH */
+
+.modal-dialog {
+    max-width: 425px;
+}
+
+.modal-content {
+    border: none;
+    width: 100%;
+    background: none;
+    
+}
+.modal-bg{
+    background-image: url("./../img/bg-bxh.png");
+    background-size: 570px;
+    height: 670px;
+    width: 600px;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    transform: translateX(-160px);
+}
+
+.close {
+    text-shadow: none;
+}
+
+.close span{
+    position: absolute;
+    font-size: 15px;
+    padding: 15px;
+    color: red;
+    border: none;
+    top: 100px;
+    left: 468px;
+    
+}
+
+/* Modal the le */
+
+.thele-btn {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+}
+
+.modal-thele-bg{
+    background-image: url("./../img/thele-modal-background.png");
+    height: 640px;
+    width: 720px;
+    background-repeat: no-repeat;
+    color:#fff;
+    position: relative;
+}
+
+.modal-content {
+    border: none;
+    background: none;
+}
+
+.close-thele {
+    position: absolute;
+    top: 55px;
+    left: 622px;
+    text-shadow: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.close-thele span{
+    position: absolute;
+    left: 6px;
+    top: 0px;
+    font-size: 15px;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal-dialog-thele {
+    max-width: 670px;
+}
+
+
+
+/* /////////////////////// */
+
+
+
+
+.modal-thele-text {
+    margin-top: 50px;
+    font-size: 17px;
+}
+
+.title {
+    color: #fff;
+    margin-bottom: 50px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.modal-thele-text {
+    width: 600px;
+    scroll-behavior: auto;
+    margin-left: 40px;
+}
+
+.modal-thele-content {
+    height: 450px;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+.modal-thele-content::-webkit-scrollbar { 
+    width: 5px; 
+    border-radius: 4px;
+} 
+
+.modal-thele-content::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.modal-thele-content::-webkit-scrollbar-track {
+    background-color: #c3502c;
+}
+
+
+
+.modal-thele-content .ten-de-muc{
+    color: yellow;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+.modal-thele-text .muc-1{
+    display: flex;
+    margin: 6px 0;
+}
+
+.modal-thele-text .muc-1 p:first-child {
+    color: #678259;
+    margin-right: 6px;
+}
+
+
+/* modal bxh  text*/
+.modal-bxh-text {
+    /* display: none; */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 145px 97px 0px 223px;
+}
+
+.modal-bxh-text table{
+    width: 100%;
+    padding-right: 20px;
+}
+
+/* .modal-bxh-text table tr {
+     height: 55px;
+} */
+
+.modal-bxh-text table tr {
+    height: 38px;
+}
+
+
+.modal-bxh-text table tr:nth-child(1){
+    color: red;
+}
+.modal-bxh-text table tr:nth-child(2){
+    color: green;
+}
+.modal-bxh-text table tr:nth-child(3){
+    color: purple;
+}
+
+/* modal bxh mobile */
+.modal-bxh-mobile {
+    display: none;
+     font-size: 18px;
+    font-weight: 500;
+    margin: 100px 35px 0 45px;
+ }
+ 
+ .modal-bxh-mobile table{
+     width: 100%;
+     padding-right: 20px;
+ }
+ 
+ .modal-bxh-mobile table tr {
+    height: 40px;
+ }
+ 
+ 
+ .modal-bxh-mobile table tr:nth-child(1){
+     color: orange;
+ }
+ .modal-bxh-mobile table tr:nth-child(2){
+     color: green;
+ }
+ .modal-bxh-mobile table tr:nth-child(3){
+     color: violet;
+ }
+
+
+/* modal lich su */
+
+.lichsu-btn {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+}
+
+.modal-lichsu-content {
+    background-color: #fff;
+}
+
+.modal-lichsu-btn a{
+    color: #fff;
+}
+
+
+@media screen and (min-width: 2200px){
+    .luottang{
+        margin-top: 750px;
+    }
+    /* .container__rank{
+        margin-top: 200px;
+
+    } */
+
+    .container__bottom {
+        margin-top: 1100px;
+    }
+
+    .right__menu {
+        top: 200px
+    }
+}
+
+@media screen and (min-width: 1900px) and (max-width: 2200px){
+    .luottang{
+        margin-top: 690px;
+    }
+
+    .container__bottom {
+        margin-top: 785px;
+    }
+
+    .right__menu {
+        top: 200px
+    }
+}
+
+@media screen and (min-width: 1600px) and (max-width: 1700px){
+    .luottang{
+        margin-top: 580px;
+    }
+
+    .container__bottom {
+        margin-top: 585px;
+        
+    }
+
+    .right__menu {
+        top: 200px
+    }
+}
+
+@media screen and (min-width: 1541px) and (max-width: 1599px){
+    .luottang{
+        margin-top: 470px;
+    }
+
+    .container__bottom {
+        margin-top: 343px;
+        
+    }
+
+    .right__menu {
+        top: 200px
+    }
+}
+
+@media screen and (min-width: 1451px) and (max-width: 1540px){
+    .luottang{
+        margin-top: 530px;
+        transform: scale(0.9);
+
+    }
+
+    .container__bottom {
+        margin-top: 465px;
+        
+    }
+
+    .right__menu {
+        top: 200px
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1450px){
+    .luottang{
+        margin-top: 470px;
+    }
+
+    .container__bottom {
+        margin-top: 310px;
+       
+    }
+
+    .right__menu {
+        top: 200px
+    }
+}
+
+/* 560 */
+
+
+@media screen and (min-width: 680px) and (max-width: 850px){
+    .wrapper{
+        background-image: url("./../img/bg_mob.jpg");
+        height: auto;
+        background-size: 100%;
+    }
+
+    .luottang, .left__menu {
+        display: none;
+    }
+
+    .container__top {
+       height: auto;
+    }
+
+    .right__menu {
+        top: 500px;
+    }
+
+    .luottang-mobile {
+        display: flex;
+        margin-top: 800px;
+        /* margin-top: 745px; */
+        transform: translateX(-30px);
+    }
+
+    .luottang__item-mob{
+        padding: 0px;
+    }
+
+    
+    .diem-mob {
+        margin-top: 40px;
+        text-align: center;
+        color: #007cb8;
+    }
+    
+    .luottang-mob {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    .diemthanmat-mob {
+        font-size: 20px;
+    }
+
+
+    .container__bottom-mobile {
+        display: block;
+       width: 100%;
+       float: left;
+       margin-top: 1454px;
+    }
+
+    .card-left {
+        float: none;
+    }
+
+    .bottom__card {
+        width: auto;
+        display: block;
+    }
+
+    .bottom__card p {
+        text-align: center;
+    }
+
+    .card a {
+        bottom: 63px;
+        left: 110px;
+
+    }
+
+    .card a img {
+        width: 130px;
+    }
+
+    .diemdoi {
+        top: 77px;
+        left: 113px;
+        font-size: 20px;
+    }
+
+    .card-doiqua {
+        top: 105px;
+        left: 143px;
+        font-size: 16px;
+    }
+
+    #diemthanmat-mob {
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin-top: 670px;
+    }
+    
+    #diemthanmat-bottom {
+        text-align: center;
+        color: #007cb8;
+        margin-bottom: 20px;
+    }
+
+
+    .qua {
+        padding-bottom: 100px;
+    }
+
+    .menu-mobile{
+        display: block;
+        background-image: url("./../img/menu-mobile.png");
+        background-repeat: no-repeat;
+        max-width: 900px;
+        background-size: 100%;
+        position: fixed;
+        bottom: -4px;
+        left: 0px;
+    }
+
+    .menu-mobie-list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    /* .dangxuat-list {
+        background-color: transparent;
+        transform: scale(1.2);
+        top: 5px;
+        right:20px;
+        display: flex;
+    }
+
+    .dangnhap{
+        display: block;
+    }
+    .text {
+        margin: 0px;
+        padding-top: 5px;
+    } */
+
+    /* #dangxuat-mob {
+        padding-top: 10px;
+    }
+    .hi, .name-acount, .dangxuat-btn {
+        padding-top: 0px ;
+        font-size: 22px;
+    } */
+
+
+
+    #luottanghoa-mob {
+        display: block;
+        /* float: right; */
+        color: red;
+        font-size: 25px;
+        padding-left: 340px;
+    }
+
+    .bxh-text {
+        margin-top: 150px;
+        margin-left: 85px;
+     }
+
+    .modal-thele-text {
+        margin-top: 50px;
+        font-size: 17px;
+        padding: 0 20px;
+
+    }
+
+    .modal-thele-bg{
+        transform: translateX(-20px);
+    }
+
+    .close-thele {
+        left: 620px;
+    }
+
+    .modal-bg {
+        transform: scale(1.2);
+    }
+    .modal-bxh-text {
+        margin: 0px;
+        padding: 240px 24px 0px 103px;
+        font-size: 30px;
+    }
+    /* .modal-bxh-text table tr:nth-child(3) {
+        height: 30px;
+    } */
+}
+
+
+
+
+
+/* reponsive 710px */
+
+@media screen and (max-width: 760px){
+    
+    .wrapper{
+        background-image: url("./../img/bg_mob.jpg");
+        height: auto;
+        background-size: 100%;
+    }
+
+    .luottang, .left__menu {
+        display: none;
+    }
+
+    .container__top {
+       height: auto;
+    }
+
+    .right__menu {
+        top: 500px;
+    }
+
+    .luottang-mobile {
+        display: flex;
+        margin-top: 480px;
+        transform: translateX(-65px);
+    }
+
+    .luottang__item-mob{
+        padding: 0px;
+    }
+
+    .luottang__item-mob img {
+        transform: scale(0.7);
+    }
+    
+    .diem-mob {
+        margin-top: 20px;
+        text-align: center;
+        color: #007cb8;
+    }
+    
+    .luottang-mob {
+        font-size: 25px;
+        font-weight: 600;
+        margin: 0px;
+    }
+
+    .diemthanmat-mob {
+        font-size: 20px;
+    }
+
+
+    .container__bottom-mobile {
+        display: block;
+       width: 100%;
+       float: left;
+       margin-top: 950px;
+    }
+
+    .card-left {
+        float: none;
+    }
+
+    .bottom__card {
+        width: auto;
+        display: block;
+    }
+
+    .bottom__card p {
+        text-align: center;
+    }
+
+    .card a {
+        bottom: 40px;
+        left: 75px;
+
+    }
+
+    .card a img {
+        width: 100px;
+    }
+
+    .diemdoi {
+        top: 50px;
+        left: 75px;
+        font-size: 16px;
+    }
+
+    .card-doiqua {
+        top: 73px;
+        font-size: 16px;
+    }
+
+    #diemthanmat-mob {
+        color: #fff;
+        display: block;
+        text-align: center;
+        margin-top: 670px;
+    }
+    
+    #diemthanmat-bottom {
+        text-align: center;
+        color: #007cb8;
+        margin-bottom: 20px;
+    }
+
+
+    .qua {
+        padding-bottom: 100px;
+    }
+
+    .menu-mobile{
+        display: block;
+        background-image: url("./../img/menu-mobile.png");
+        background-repeat: no-repeat;
+        max-width: 900px;
+        height: auto;
+        background-size: 100%;
+        position: fixed;
+        bottom: -4px;
+        left: 0px;
+        padding: 0;
+    }
+
+    .menu-mobie-list{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .menu-mobile-item {
+        padding: 0px;
+    }
+
+    .menu-mobile-item button img, .menu-mobile-item a img {
+        padding: 15px 0px;
+        height: 70px;
+    }
+
+
+
+    .navbar {
+        background: -webkit-linear-gradient(90deg, #1892cf 28%, #63b4e0 61%, #64c5fa 100%);
+
+        padding: 0px;
+        margin: 0px;
+        height: 65px;
+        width: 100%;
+        position: relative;
+        display: block;
+    }
+    
+    
+    .navbar .icon img{
+        margin: 10px;
+        width: 100px;
+        float: left;
+    }
+    
+    .navbar-list {
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        margin: 0px;
+        list-style: none;
+        justify-content: space-between;
+        align-items: center;
+        display: flex;
+        display: none;
+    }
+
+    .navbar-item {
+      margin-right: 20px;
+
+    }
+
+    .navbar-item span {
+        color: #fff;
+        font-size: 25px;
+        font-weight: 500;
+    }
+    .dangxuat-list {
+        background-color: transparent;
+        transform: scale(1.2);
+        top: 5px;
+        right:20px;
+        display: flex;
+        display: none;
+
+    }
+
+    .dangnhap{
+        display: none;
+    }
+    .text {
+        margin: 0px;
+        padding-top: 5px;
+    } 
+
+    #dangxuat-mob {
+        padding-top: 10px;
+    }
+    .hi, .name-acount, .dangxuat-btn {
+        padding-top: 0px ;
+        font-size: 22px;
+    }
+
+
+
+    #luottanghoa-mob {
+        display: block;
+        /* float: right; */
+        color: red;
+        font-size: 25px;
+        padding-left: 340px;
+    }
+
+    .bxh-text {
+        margin-top: 150px;
+        margin-left: 85px;
+     }
+
+    .modal-thele-text {
+        margin-top: 50px;
+        font-size: 17px;
+        padding: 0 20px;
+
+    }
+
+    .modal-thele-bg{
+        transform: translateX(-20px);
+    }
+
+    .close-thele {
+        left: 620px;
+    }
+
+    .modal-bg {
+        transform: scale(1.2);
+    }
+    .modal-bxh-text {
+        margin: 0px;
+        padding: 168px 10px 0px 68px;
+        font-size: 25px;
+    }
+    .modal-bxh-text table tr {
+        height: 55px;
+   }
+} 
