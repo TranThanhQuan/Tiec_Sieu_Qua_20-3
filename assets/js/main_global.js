@@ -85,10 +85,10 @@ function showLogin(){
 /*
 * showUserInfo
 */
-function showUserInfo(){
-    var response = {title : 'Thông báo', 'msg' : 'Bạn cần nhập thông tin cá nhân để tham gia sự kiện !'};
-    show_result(response, show_userinfo);return;
-}
+// function showUserInfo(){
+//     var response = {title : 'Thông báo', 'msg' : 'Bạn cần nhập thông tin cá nhân để tham gia sự kiện !'};
+//     show_result(response, show_userinfo);return;
+// }
 
 /*
 * Popup show_userinfo
@@ -199,21 +199,3 @@ function copy_clipboard(el, id) {
     $('#btn_copy_' + id).html('copied');
 } // end function select_all_and_copy(el)
 
-function getCodeTanThu(){
-    $.ajax({
-        url : root + 'spin/ajax_getGiftTanThu',
-        type: 'POST',
-        dataType: 'json',
-        success: function(response){
-            if( response.status == 1 ){
-                response.msg = `<p style="color:#000">GiftCode Tân Thủ của bạn là : <span style="font-weight:bold;color:red">${response.giftcode}</span></p>
-                <p style="color:#000">GiftCode Chung : <span style="font-weight:bold;color:red">PHONGLANGTHIENHA</span></p>`;
-                show_result(response);
-            }else{
-                response.msg = `<p style="color:#000">GiftCode Chung : <span style="font-weight:bold;color:red">PHONGLANGTHIENHA</span></p>`;
-                response.title = 'Thông báo !';
-                show_result(response);
-            }
-        }
-    });
-}

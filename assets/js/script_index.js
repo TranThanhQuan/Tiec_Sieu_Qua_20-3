@@ -15,7 +15,7 @@ $('.lichsu-btn').click(function(){
 $(document).ready(function() {
     getDataClient();
     getListRank();
-    
+    getListServer();
 });
 
 
@@ -77,15 +77,14 @@ function getDataClient (){
                 $("#diemthanmat-top").html(diemthanmat);
                 $("#diemthanmat-bottom").html(diemthanmat);
 
-                console.log("1");
+                // console.log("1");
             }
 
             else{
                 let username = user_login.username;
-                // $('#dangxuat').attr("class", "show");
-                // $('#dangxuat-mob').attr("class","show-navbar");
                 $('#dangxuat').addClass("show");
                 $('#dangxuat-mob').addClass("show-navbar");
+                $('#dangnhap-mob').addClass("hide");
 
                 $("#username").html(username);
                 
@@ -100,7 +99,7 @@ function getDataClient (){
                 $("#diemthanmat-bottom").html(diemthanmat);
 
 
-                console.log("2");
+                // console.log("2");
             }
         },
         complete: function(){
@@ -108,28 +107,6 @@ function getDataClient (){
         }
     });
 }
-
-
-
-// function getListRank (){
-
-//     $.getJSON('http://loanthe.gamota/api/getListRank.php', function(data) {
-
-//     let rank = data.rank;
-//     var html = '';
-//     $.each(rank, function(key, value){
-
-//     html += `<tr>
-//                 <td>${key+1}. ${value.role_name}</td>
-//                 <td>${value.server}</td>
-//                 <td>${value.point}</td>
-//              </tr>` ;
-
-//     $("#bxh").html(html);
-//         }) 
-    
-//     });
-// }
 
 
 function getListRank (){
@@ -153,7 +130,7 @@ function getListRank (){
                      </tr>` ;
         
             $("#bxh").html(html);
-                })
+                });
             
         },
         complete: function(){
@@ -165,3 +142,57 @@ function getListRank (){
 function showUserInfo(){
     $('#user_info').modal('toggle');
 }
+
+
+function getListServer(){
+    $.ajax({
+        url : 'http://loanthe.gamota/api/getListServer',
+        type: 'POST',
+        data: 'allow='+1,
+        dataType: 'json',
+        beforeSend:function(){
+            // show_dice();
+        },
+        success: function(data){
+
+            let server = data.server;
+            listserver = '';
+
+            $.each(server, function(key, value){
+        
+                listserver += `<option value="${key}">${value}</option>` ;
+                $("#server").html(listserver);
+            });
+
+            $("#listserver").html(server);
+        
+
+        },
+        complete: function(){
+            
+        }
+    });
+}
+
+
+
+
+$('#server').change(function(){
+    var server_id = $(this).val();
+    if(server_id == null || server_id == ''){
+        show_result({'status':0, 'msg':'Vui lòng chọn server !'});return;
+    }
+
+    var data = { 'server_id': server_id, 'type': 'vipgamota'};
+    $.ajax({
+        url:'http://loanthe.gamota/api/ajax_getRoleInfo',
+        type: 'post',
+        data: data,
+        dataType: 'json',
+        success: function(data) {
+            if(data.status == 1){
+                $('#choose_role').html(data.html);
+            }else show_result(data);
+        }
+    });
+})

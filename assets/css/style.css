@@ -86,6 +86,7 @@ html{
     background-color: #7cb7b9;
     border-radius: 15px;
     padding: 10px 20px;
+    /* display: none; */
 }
 
 .dangnhap-item:first-child {
@@ -121,6 +122,7 @@ html{
 }
 
 .home-icon img{
+    margin-top: -5px;
     width: 30px;
 }
 
@@ -616,6 +618,10 @@ html{
     .right__menu {
         top: 200px
     }
+
+    .home-icon {
+        margin-top: -10px;
+    }
 }
 
 @media screen and (min-width: 1451px) and (max-width: 1540px){
@@ -626,7 +632,7 @@ html{
     }
 
     .container__bottom {
-        margin-top: 450px;
+        margin-top: 463px;
         
     }
 
@@ -641,7 +647,7 @@ html{
     }
 
     .container__bottom {
-        margin-top: 310px;
+        margin-top: 322px;
        
     }
 
@@ -843,7 +849,7 @@ html{
         justify-content: space-between;
         align-items: center;
         display: flex;
-        /* display: none; */
+        display: none;
     }
 
     .navbar-item {
@@ -1015,14 +1021,16 @@ html{
 
     .menu-mobile{
         display: block;
-        background-image: url("./../img/menu-mobile.png");
+        background-image: url("./../img/menu.png");
         background-repeat: no-repeat;
         max-width: 900px;
         height: auto;
         background-size: 100%;
         position: fixed;
-        bottom: -4px;
+        bottom: -10px;
+        /* left: -12px; */
         left: 0px;
+
         padding: 0;
     }
 
@@ -1034,16 +1042,24 @@ html{
         width: 100%;
         margin: 0px;
         padding: 0px;
+        height: 100px;
     }
 
-    .menu-mobile-item {
+    .menu-mobie-list a {
+        height: 100px;
+        width: 100%;
+    }
+
+    
+
+    /* .menu-mobile-item {
         padding: 0px;
     }
 
-    .menu-mobile-item button img, .menu-mobile-item a img {
+    .menu-mobile-item a{
         padding: 15px 0px;
         height: 70px;
-    }
+    } */
 
 
 
@@ -1067,7 +1083,7 @@ html{
     .navbar-list {
         position: absolute;
         right: 0px;
-        top: 10px;
+        top: -2px;
         margin: 0px;
         list-style: none;
         justify-content: space-between;
@@ -1080,17 +1096,21 @@ html{
       margin-right: 20px;
 
     }
+    .navbar-item a img {
+        width: 35px;
+    }
 
-    .navbar-item span {
+    .navbar-item a span {
         color: #fff;
-        font-size: 25px;
+        font-size: 27px;
         font-weight: 500;
+        /* padding-top: 10px; */
     }
     .dangxuat-list {
         background-color: transparent;
         transform: scale(1.2);
         top: 5px;
-        right:20px;
+        right: 35px;
         display: flex;
         /* display: none; */
 
@@ -1102,16 +1122,26 @@ html{
     .text {
         margin: 0px;
         padding-top: 5px;
+        /* padding-bottom: 5px; */
     } 
+    .text p {
+        line-height: 22px;
+        /* margin: 0px 0px 0px 4px; */
+        padding: 0px 0px 0px 2px;
 
-    #dangxuat-mob {
-        padding-top: 10px;
+
     }
+
     .hi, .name-acount, .dangxuat-btn {
         padding-top: 0px ;
-        font-size: 22px;
+        font-size: 18px;
+        line-height: 22px;
     }
-
+    
+    /* #dangxuat-mob {
+        
+        padding: 10px 0px 0px 0px;
+    } */
 
 
     #luottanghoa-mob {
@@ -1153,4 +1183,8 @@ html{
     .modal-bxh-text table tr {
         height: 55px;
    }
+
+   .hide {
+    display: none;
+    }
 } 
