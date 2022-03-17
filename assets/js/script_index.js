@@ -1,15 +1,12 @@
-$('.lichsu-btn').click(function(){
-    swal(
-        {
-            title: "Thông báo !",
-            text: "Bạn cần đăng nhập để tham gia sự kiện !",
-            buttons : {
-                comfirm: "Đăng nhập"
-            }
-        });
-});
-
-
+function showHistory(){
+    swal({
+        title: "Thông báo !",
+        text: "Bạn cần đăng nhập để tham gia sự kiện !",
+        buttons : {
+            comfirm: "Đăng nhập"
+        }
+    });
+}
 
 
 $(document).ready(function() {
@@ -156,17 +153,13 @@ function getListServer(){
         success: function(data){
 
             let server = data.server;
-            listserver = '';
+            listserver = '<option value="">--Chọn máy chủ--</option>';
 
             $.each(server, function(key, value){
-        
                 listserver += `<option value="${key}">${value}</option>` ;
-                $("#server").html(listserver);
             });
 
-            $("#listserver").html(server);
-        
-
+            $("#server").html(listserver);
         },
         complete: function(){
             
