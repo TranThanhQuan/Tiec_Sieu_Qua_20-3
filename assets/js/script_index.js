@@ -189,3 +189,32 @@ $('#server').change(function(){
         }
     });
 })
+
+
+
+function show_dice(){
+    var div = document.createElement("div");
+    div.innerHTML = $('#html_dice').html();
+    swal({
+        title: ' ',
+        content:div,
+        className: "dice_prize",
+        closeOnClickOutside: false,
+        buttons:{
+            confirm:{
+                text: "Ok",//Đăng nhập
+                value: "confirm",
+                visible: true,
+                className: "btn_confirm",
+                closeModal: false
+            }
+        }
+    });
+}
+
+
+window.close_swal = function close_swal() {
+    console.log("Closing swal...");
+    swal.close();
+    return 1;
+};
